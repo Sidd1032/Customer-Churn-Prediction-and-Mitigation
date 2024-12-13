@@ -1,30 +1,44 @@
 Customer Churn Prediction and Mitigation
+
 Tools Used: Python, Machine Learning, Jupyter Notebook
 
-This project focused on analyzing customer behavior to predict the likelihood of churn using advanced analytics and machine learning techniques. Key steps included:
+Objective:
+The goal of this project was to analyze customer behavior and predict churn using advanced analytics and machine learning techniques. By identifying customers likely to churn, businesses can implement targeted retention strategies to reduce customer turnover and improve profitability.
 
-Data Preprocessing:
+Steps Undertaken:
 
-Cleaned and prepared a dataset containing customer details such as demographic information, subscription tenure, and service usage patterns.
-Handled missing values and transformed categorical variables into numerical representations for machine learning algorithms.
+Data Understanding and Preprocessing:
+
+The dataset contained key columns like customerID, gender, SeniorCitizen, tenure, InternetService, Contract, MonthlyCharges, TotalCharges, and the target column Churn.
+Missing values in TotalCharges were imputed appropriately, and data types were corrected to ensure consistency.
+Features such as Contract, PaymentMethod, and InternetService were encoded using one-hot or label encoding techniques.
 Exploratory Data Analysis (EDA):
 
-Visualized customer behaviors and trends using Python libraries like Matplotlib and Seaborn.
-Identified key factors correlated with churn, such as contract type, tenure, and monthly charges.
+Visualized churn distribution to understand the proportion of customers leaving.
+Analyzed correlations between features and churn. For example:
+Customers with shorter tenure or month-to-month contracts showed higher churn rates.
+Higher MonthlyCharges correlated with a higher likelihood of churn, particularly for customers with premium services.
+Generated visualizations (e.g., histograms, bar charts, and heatmaps) to identify trends and insights.
 Feature Engineering:
 
-Created new features to enhance model performance, such as tenure buckets and interaction terms between payment methods and churn.
-Scaled continuous variables for uniformity across features.
-Modeling:
+Derived new features, such as average charges per tenure, to capture customer behavior trends.
+Normalized numerical variables (tenure, MonthlyCharges, etc.) to enhance model performance.
+Model Development:
 
-Built and evaluated various machine learning models, including Logistic Regression, Decision Trees, Random Forests, and Gradient Boosting (e.g., XGBoost, LightGBM).
-Tuned hyperparameters using GridSearchCV and RandomizedSearchCV to optimize performance metrics like accuracy, precision, recall, and F1-score.
-Results:
+Used supervised machine learning models like Logistic Regression, Decision Trees, Random Forest, Gradient Boosting (XGBoost), and Support Vector Machines (SVM).
+Split the data into training and testing sets (80:20) and applied stratified sampling to balance the target variable.
+Evaluated models using metrics like accuracy, precision, recall, F1-score, and AUC-ROC to measure their ability to identify churn.
+Random Forest and Gradient Boosting showed the best performance, with an AUC-ROC score above 85%.
+Hyperparameter Tuning:
 
-Achieved a high-performing predictive model with accurate churn predictions, enabling identification of high-risk customers.
-Interpreted feature importances to provide actionable insights for customer retention strategies.
-Mitigation Strategies:
+Optimized models using techniques like Grid Search and Randomized Search to improve accuracy and generalization.
+Insights and Mitigation Strategies:
 
-Suggested targeted interventions such as offering personalized discounts, improving support for long-tenured customers, and enhancing services for customers with specific contract types.
-Developed a churn dashboard for real-time monitoring of customer segments at risk.
-This project demonstrated expertise in data analysis, predictive modeling, and business impact strategy development, ultimately supporting efforts to retain customers and reduce churn.
+Identified high-risk customer segments (e.g., customers with month-to-month contracts or those with low tenure).
+Proposed retention strategies such as offering discounts for long-term contracts, improving service quality, and personalizing customer engagement.
+Deployment and Evaluation:
+
+Built a predictive system to flag high-risk customers in real-time using Python and deployed it in a test environment.
+Regularly monitored model performance and updated it with new data to ensure its relevance.
+Outcome:
+The project successfully demonstrated the use of machine learning to predict churn with high accuracy, enabling proactive retention efforts. Insights derived from the analysis allowed the creation of targeted strategies, leading to a potential reduction in churn and improvement in customer satisfaction.
